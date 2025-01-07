@@ -229,13 +229,13 @@ ld9900: $(HDR) ld.c
 	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o ld9900 ld.c
 
 nm9900: $(HDR) nm.c
-	$(CC) $(CFLAGS) -o nm9900 nm.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o nm9900 nm.c
 
 osize9900: $(HDR) osize.c
-	$(CC) $(CFLAGS) -o osize9900 osize.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o osize9900 osize.c
 
 dumprelocs9900: $(HDR) dumprelocs.c
-	$(CC) $(CFLAGS) -o dumprelocs9900 dumprelocs.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o dumprelocs9900 dumprelocs.c
 
 ascp1600: $(HDR) $(CORE) as1-cp1600.c as6-cp1600.c
 	$(CC) $(CFLAGS)  -DTARGET_CP1600 -o ascp1600 $(CORE) as1-cp1600.c as6-cp1600.c
