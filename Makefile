@@ -223,10 +223,10 @@ dumprelocs8086: $(HDR) dumprelocs.c
 	$(CC) $(CFLAGS) -o dumprelocs8086 dumprelocs.c
 
 as9900: $(HDR) $(CORE) as1-tms9900.c as6-tms9900.c
-	$(CC) $(CFLAGS)  -DTARGET_TMS9900 -o as9900 $(CORE) as1-tms9900.c as6-tms9900.c
+	$(CC) $(CFLAGS)  -DTARGET_TMS9900 -DOBJ_LONGNAME -o as9900 $(CORE) as1-tms9900.c as6-tms9900.c
 
 ld9900: $(HDR) ld.c
-	$(CC) $(CFLAGS) -o ld9900 ld.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o ld9900 ld.c
 
 nm9900: $(HDR) nm.c
 	$(CC) $(CFLAGS) -o nm9900 nm.c
