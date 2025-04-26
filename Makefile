@@ -88,19 +88,19 @@ dumprelocs6502: $(HDR) dumprelocs.c
 	$(CC) $(CFLAGS) -o dumprelocs6502 dumprelocs.c
 
 as6800: $(HDR) $(CORE) as1-6800.c as6-6800.c
-	$(CC) $(CFLAGS)  -DTARGET_6800 -o as6800 $(CORE) as1-6800.c as6-6800.c
+	$(CC) $(CFLAGS)  -DTARGET_6800 -DOBJ_LONGNAME -o as6800 $(CORE) as1-6800.c as6-6800.c
 
 ld6800: $(HDR) ld.c
-	$(CC) $(CFLAGS) -o ld6800 ld.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o ld6800 ld.c
 
 nm6800: $(HDR) nm.c
-	$(CC) $(CFLAGS) -o nm6800 nm.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o nm6800 nm.c
 
 osize6800: $(HDR) osize.c
-	$(CC) $(CFLAGS) -o osize6800 osize.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o osize6800 osize.c
 
 dumprelocs6800: $(HDR) dumprelocs.c
-	$(CC) $(CFLAGS) -o dumprelocs6800 dumprelocs.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o dumprelocs6800 dumprelocs.c
 
 as6805: $(HDR) $(CORE) as1-6805.c as6-6805.c
 	$(CC) $(CFLAGS)  -DTARGET_6805 -o as6805 $(CORE) as1-6805.c as6-6805.c
@@ -394,7 +394,7 @@ ldz80: $(HDR) ld.c
 	$(CC) $(CFLAGS) -o ldz80 ld.c
 
 nmz80: $(HDR) nm.c
-	$(CC) $(CFLAGS) -o nmz80 nm.c
+	$(CC) $(CFLAGS) -DOBJ_LONGNAME -o nmz80 nm.c
 
 osizez80: $(HDR) osize.c
 	$(CC) $(CFLAGS) -o osizez80 osize.c
